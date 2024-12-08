@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Password Manager</title>
+      <link href="/src/index.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+    <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+      <div id="app" class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+        <h1 class="text-2xl font-bold mb-6 text-center">Password Manager</h1>
+        <div id="password-form" class="mb-6">
+          <input type="text" id="website" placeholder="Website" class="w-full p-3 mb-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-300" required>
+          <input type="text" id="username" placeholder="Username" class="w-full p-3 mb-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-300" required>
+          <div class="relative">
+            <input type="password" id="password" placeholder="Password" class="w-full p-3 mb-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-300 pr-10" required>
+            <button id="copy-password" class="absolute inset-y-0 right-0 flex items-center px-4 text-gray-600 hover:text-gray-800">
+              <i class="fas fa-copy"></i>
+            </button>
+          </div>
+          <div class="flex justify-between">
+            <button id="generate-password" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Generate Password</button>
+            <button id="save-password" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Save Password</button>
+          </div>
+        </div>
+        <div id="password-list"></div>
+      </div>
+      <script type="module" src="src/main.js"></script>
+    </body>
+    </html>
